@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Student Teacher Booking Appointment</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Teacher Dashboard</h1>
+        <form id="schedule-form">
+            <input type="date" id="appointment-date" required>
+            <!-- Other fields -->
+            <button type="submit">Schedule Appointment</button>
+        </form>
+        
+        <h2>Appointments</h2>
+        <ul id="appointment-list"></ul>
+        
+        <h2>Messages</h2>
+        <ul id="messages"></ul>
+        
+        <button id="logout-btn">Logout</button>
+    </div>
+    <ul>
+        <li><a href="student.html">Student</a></li>
+        <li><a href="teacher.html">Teacher</a></li>
+        <li><a href="admin.html">Admin</a></li>
+    </ul>
+    <script src="firebase.js"></script>
+    <script src="teacher.js"></script>
+    <script src="https://automatic-opus-382309-default-rtdb.firebaseio.com"></script>
+</body>
+</html>

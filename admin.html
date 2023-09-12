@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<title>Student Teacher Booking Appointment</title>
+<body>
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+        <h1>Add Teacher</h1>
+    <form action="/submit_teacher" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required><br><br>
+
+        <label for="department">Department:</label>
+        <input type="text" id="department" name="department" required><br><br>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required><br><br>
+
+        <form id="add-teacher-form">
+            <input type="text" id="teacher-name" placeholder="Teacher Name" required>
+            <input type="text" id="teacher-department" placeholder="Department" required>
+           
+            <button type="submit">Add Teacher</button>
+        </form>
+        
+        <ul id="teacher-list"></ul>
+        
+        <h2>Student Registration Approvals</h2>
+        <ul id="registration-approvals"></ul>
+        
+        <button id="logout-btn">Logout</button>
+    </div>
+    <ul>
+        <li><a href="student.html">Student</a></li>
+        <li><a href="teacher.html">Teacher</a></li>
+        <li><a href="admin.html">Admin</a></li>
+    </ul>
+    <script src="firebase.js"></script>
+    <script src="https://console.firebase.google.com/project/automatic-opus-382309/database/automatic-opus-382309-default-rtdb/data/~2F"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
