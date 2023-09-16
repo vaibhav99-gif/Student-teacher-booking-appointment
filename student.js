@@ -60,7 +60,6 @@ auth.onAuthStateChanged(user => {
                     const bookButton = document.createElement('button');
                     bookButton.textContent = 'Book';
                     bookButton.addEventListener('click', () => {
-                        // Handle booking appointment logic
                     });
                     listItem.appendChild(bookButton);
                     teacherList.appendChild(listItem);
