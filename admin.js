@@ -47,7 +47,6 @@ async function fetchRegistrationApprovals() {
                 await db.collection('students').add({
                     name: student.name,
                     email: student.email,
-                    // ... Other fields
                 });
                 await doc.ref.delete();
                 fetchRegistrationApprovals(); // Refresh the list
