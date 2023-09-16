@@ -40,7 +40,6 @@ auth.onAuthStateChanged(user => {
             });
         });
 
-        // Display appointments
         db.collection('appointments')
             .where('student', '==', user.uid)
             .get()
@@ -53,7 +52,6 @@ auth.onAuthStateChanged(user => {
                 });
             });
     } else {
-        // User is not logged in, redirect to login page
         window.location.href = 'index.html';
     }
 });
