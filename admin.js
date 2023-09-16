@@ -30,7 +30,6 @@ async function fetchTeachers() {
     }
 }
 
-// Fetch and display student registration approvals
 async function fetchRegistrationApprovals() {
     const registrationApprovals = document.getElementById('registration-approvals');
     registrationApprovals.innerHTML = '';
@@ -61,9 +60,6 @@ async function fetchRegistrationApprovals() {
     }
 }
 
-// ... (previously defined code)
-
-// Fetch teacher list and registration approvals when the page loads
 window.addEventListener('load', () => {
     fetchTeachers();
     fetchRegistrationApprovals();
