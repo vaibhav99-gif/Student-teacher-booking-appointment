@@ -14,7 +14,6 @@ const firebaseConfig = {
 
 auth.onAuthStateChanged(user => {
     if (user) {
-        // User is logged in as teacher
         const scheduleForm = document.getElementById('schedule-form');
         const appointmentList = document.getElementById('appointment-list');
         const messagesList = document.getElementById('messages');
@@ -34,8 +33,6 @@ auth.onAuthStateChanged(user => {
                 console.error('Appointment scheduling error:', error);
             }
         });
-
-        // Fetch and display teacher's appointments
         db.collection('appointments')
             .where('teacher', '==', user.uid)
             .get()
@@ -47,8 +44,6 @@ auth.onAuthStateChanged(user => {
                     appointmentList.appendChild(listItem);
                 });
             });
-
-        // Fetch and display messages
         db.collection('messages')
             .where('recipient', '==', user.uid)
             .get()
